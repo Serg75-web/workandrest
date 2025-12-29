@@ -1,12 +1,10 @@
 package ru.netology.services;
 
-import ru.netology.services.calcCount;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        calcCount service = new calcCount();
+        CalcCount service = new CalcCount();
 
         int expected = 3;
         int income = 10000;

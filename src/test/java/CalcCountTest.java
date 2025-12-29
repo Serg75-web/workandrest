@@ -3,9 +3,8 @@ package ru.netology.services;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.api.Assertions;
-import ru.netology.services.calcCount;
 
-public class calcCountTest {
+public class CalcCountTest {
 
     @ParameterizedTest
 //    @CsvSource({
@@ -14,7 +13,7 @@ public class calcCountTest {
 //    })
     @CsvFileSource(files = "src/test/resources/count.csv")
     void testCalcIncomeLess(int expected, int income, int expenses, int threshold) {
-        calcCount service = new calcCount();
+        CalcCount service = new CalcCount();
 
 //        int expected = 3;
 //        int income = 10000;
