@@ -5,14 +5,15 @@ public class CalcCount {
     public int calculate(int income, int expenses, int threshold) {
         int count = 0; // счётчик месяцев отдыха
         int money = 0; // имеющиеся средства
-        int moneyAfter = money + income - expenses; // имеющиеся средства плюс доход минус обязательные траты
 
-        for (int month = 0; month < 12; month++) {
-            if (money >= threshold) { // можем ли отдыхать?
+        for (int i = 0; i < 12; i++) {
+            if (money >= threshold) { // отдыхаем
+                money -= expenses; // money = money - expenses;
+                money /=3; // money = money / 3
                 count++; // увеличиваем счётчик месяцев отдыха
-                money = moneyAfter - moneyAfter * 2 / 3;
-            } else {
-                money = money + income - expenses;
+            } else { // работаем
+                money += income; // money = money + income
+                money -= expenses;
             }
         }
         return count;
