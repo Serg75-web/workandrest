@@ -9,7 +9,7 @@ public class CalcCount {
         for (int i = 0; i < 12; i++) {
             if (money >= threshold) { // отдыхаем
                 money -= expenses; // money = money - expenses;
-                money /=3; // money = money / 3
+                money /= 3; // money = money / 3
                 count++; // увеличиваем счётчик месяцев отдыха
             } else { // работаем
                 money += income; // money = money + income

@@ -19,5 +19,5 @@ public class Main {
         threshold = 150000;
         actual = service.calculate(income, expenses, threshold);
         System.out.println(expected + " -- ? -- " + actual);
-        }
+    }
 }
